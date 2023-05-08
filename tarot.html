@@ -5,11 +5,15 @@
 </head>
 <body>
 
-<input id="start_button" type="button" value="占う">
-  <script>
+<button onclick="Tarot();">占う</button>
+<p id="Result"></p>
+
+<script>
+  function Tarot() {
     let r = Math.floor( Math.random() * 10) ;
-    document.write([r]);
-  </script>
+    document.getElementById("Result").innerHTML = [r];
+  }
+</script>
 
 </body>
 </html>
