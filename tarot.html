@@ -12,10 +12,10 @@
   function Tarot() {
     let suit = Math.floor( Math.random() * 2) ;
     if (suit = 0) {
-      document.getElementById("Result").innerHTML = "大アルカナ"[suit];
+      document.getElementById("Result").innerHTML = [suit];
     }
     else{
-      document.getElementById("Result").innerHTML = "小アルカナ"[suit];
+      document.getElementById("Result").innerHTML = [suit];
     }
   }
 </script>
