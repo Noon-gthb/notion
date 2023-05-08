@@ -10,12 +10,24 @@
 
 <script>
   function Tarot() {
-    let suit = Math.floor( Math.random() * 2) ;
-    if (suit = 0) {
+    var suit = Math.floor( Math.random() *2 );
+    if ( suit == 0 ) {
       document.getElementById("Result").innerHTML = "大アルカナ";
     }
-    else {
-      document.getElementById("Result").innerHTML = "小アルカナ";
+    else if ( suit == 1 ) {
+      var suit = Math.floor( Math.random() *4 ) +1;
+      if ( suit == 1 ) {
+        document.getElementById("Result").innerHTML = "ワンド";
+      }
+      else if ( suit == 2 ) {
+        document.getElementById("Result").innerHTML = "カップ";
+      }
+      else if ( suit == 3 ) {
+        document.getElementById("Result").innerHTML = "ソード"
+      }
+      else if ( suit == 4 ) {
+        document.getElementById("Result").innerHTML = "ペンタクルス"
+      }
     }
   }
 </script>
