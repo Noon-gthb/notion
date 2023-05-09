@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-<meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Dancing+Script:wght@700&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0px;
+      background-color: #fff;
+      line-height: 1.6;
+      text-align: center;
+    }
+    .field {
+      padding: 25px 25px 10px 25px;
+      border-radius: 10px;
+      background: #f4eeee;
+      width: 10vw;
+      color: #bfa2a0;
+      display: inline-block;
+      box-shadow: none;
+      text-align: center;
+    }
+    .title {
+      font-family: 'Dancing Script', serif;
+      font-size: 1.5rem;
+    }
+    .image {
+      width: 10vw;
+      height: auto;
+      display: block;
+    }
+    .cardname {
+      font-family: 'Cinzel', serif;
+    }
+    .position {
+      font-family: 'Noto Serif JP', serif;
+    }
+  </style>
 </head>
+
 <body>
 
-<img src="img/card.png" id="Result_Image" onclick="Tarot();">
-<p id="Result_Card"></p>
-<p id="Result_Position"></p>
+<div class="field">
+  <img src="img/card.png" id="Result_Image" class="image" onclick="Tarot();">
+  <p id="Result_Card" class="cardname">　<br>　</p>
+  <p id="Result_Position" class="position">　</p>
+</div>
 
 <script>
   function Tarot() {
