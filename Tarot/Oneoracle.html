@@ -6,15 +6,87 @@
 <body>
 
 <button onclick="Tarot();">占う</button>
-<p id="Result"></p>
+<p id="Result_Card"></p>
+<p id="Result_Position"></p>
 
 <script>
   function Tarot() {
     var suit = Math.floor( Math.random() *2 );
     if ( suit == 0 ) {
       var card = Math.floor( Math.random() *22 );
+      if ( suit == 0 && card == 0 ) {
+        document.getElementById("Result_Card").innerHTML = "0<br>The Fool";
+      }
+      if else ( suit == 0 && card == 1 ) {
+        document.getElementById("Result_Card").innerHTML = "I<br>The Magician";
+      }
+      if else ( suit == 0 && card == 2 ) {
+        document.getElementById("Result_Card").innerHTML = "II<br>The High Priestess";
+      }
+      if else ( suit == 0 && card == 3 ) {
+        document.getElementById("Result_Card").innerHTML = "III<br>The Empress";
+      }
+      if else ( suit == 0 && card == 4 ) {
+        document.getElementById("Result_Card").innerHTML = "IV<br>The Emperor";
+      }
+      if else ( suit == 0 && card == 5 ) {
+        document.getElementById("Result_Card").innerHTML = "V<br>The Hierophant";
+      }
+      if else ( suit == 0 && card == 6 ) {
+        document.getElementById("Result_Card").innerHTML = "VI<br>The Lovers";
+      }
+      if else ( suit == 0 && card == 7 ) {
+        document.getElementById("Result_Card").innerHTML = "VII<br>The Chariot";
+      }
+      if else ( suit == 0 && card == 8 ) {
+        document.getElementById("Result_Card").innerHTML = "VIII<br>Strength";
+      }
+      if else ( suit == 0 && card == 9 ) {
+        document.getElementById("Result_Card").innerHTML = "IX<br>The Hermit";
+      }
+      if else ( suit == 0 && card == 10 ) {
+        document.getElementById("Result_Card").innerHTML = "X<br>Wheel of Fortune";
+      }
+      if else ( suit == 0 && card == 11 ) {
+        document.getElementById("Result_Card").innerHTML = "XI<br>Justice";
+      }
+      if else ( suit == 0 && card == 12 ) {
+        document.getElementById("Result_Card").innerHTML = "XII<br>The Hanged Man";
+      }
+      if else ( suit == 0 && card == 13 ) {
+        document.getElementById("Result_Card").innerHTML = "XIII<br>Death";
+      }
+      if else ( suit == 0 && card == 14 ) {
+        document.getElementById("Result_Card").innerHTML = "XIV<br>Temperance";
+      }
+      if else ( suit == 0 && card == 15 ) {
+        document.getElementById("Result_Card").innerHTML = "XV<br>The Devil";
+      }
+      if else ( suit == 0 && card == 16 ) {
+        document.getElementById("Result_Card").innerHTML = "XVI<br>The Tower";
+      }
+      if else ( suit == 0 && card == 17 ) {
+        document.getElementById("Result_Card").innerHTML = "XVII<br>The Star";
+      }
+      if else ( suit == 0 && card == 18 ) {
+        document.getElementById("Result_Card").innerHTML = "XVIII<br>The Moon";
+      }
+      if else ( suit == 0 && card == 19 ) {
+        document.getElementById("Result_Card").innerHTML = "XIX<br>The Sun";
+      }
+      if else ( suit == 0 && card == 20 ) {
+        document.getElementById("Result_Card").innerHTML = "XX<br>Judgement";
+      }
+      if else ( suit == 0 && card == 21 ) {
+        document.getElementById("Result_Card").innerHTML = "XXI<br>The World";
+      }
       var ur = Math.floor( Math.random() *2 );
-      document.getElementById("Result").innerHTML = "大アルカナ" + suit + "-" + card + "-" + ur;
+      if ( ur == 0 ) {
+        document.getElementById("Result_Position").innerHTML = "正位置";
+      }
+      if else ( ur == 1 ) {
+        document.getElementById("Result_Position").innerHTML = "逆位置";
+      }
     }
     else if ( suit == 1 ) {
       var suit = Math.floor( Math.random() *4 ) +1;
