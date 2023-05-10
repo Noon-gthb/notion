@@ -16,20 +16,34 @@
       padding: 25px 25px 10px 25px;
       border-radius: 10px;
       background: #f4eeee;
-      width: 10vw;
       color: #bfa2a0;
       display: inline-block;
       box-shadow: none;
       text-align: center;
     }
-    .title {
-      font-family: 'Dancing Script', serif;
-      font-size: 1.5rem;
-    }
     .image {
-      width: 10vw;
       height: auto;
       display: block;
+    }
+   @media screen and (min-width: 640px) {
+     .fieldw,.imagew {
+        width: 20vw;
+      }
+    }
+   @media screen and (min-width: 768px) {
+     .fieldw,.imagew {
+        width: 17vw;
+      }
+    }
+   @media screen and (min-width: 1024px) {
+     .fieldw,.imagew {
+        width: 13vw;
+      }
+    }
+   @media screen and (min-width: 1280px) {
+     .fieldw,.imagew {
+        width: 10vw;
+      }
     }
     .cardname {
       font-family: 'Cinzel', serif;
@@ -42,8 +56,8 @@
 
 <body>
 
-<div class="field">
-  <img src="img/card.png" id="Result_Image" class="image" onclick="Tarot();">
+<div class="field fieldw">
+  <img src="img/card.png" id="Result_Image" class="image imagew" onclick="Tarot();">
   <p id="Result_Card" class="cardname">　<br>　</p>
   <p id="Result_Position" class="position">　</p>
 </div>
