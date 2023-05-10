@@ -45,7 +45,7 @@
         width: 10vw;
       }
     }
-    .cardname {
+    .card {
       font-family: 'Cinzel', serif;
     }
     .position {
@@ -57,13 +57,19 @@
 <body>
 
 <div class="field fieldw">
-  <img src="img/card.png" id="Result_Image" class="image imagew" onclick="Tarot();">
-  <p id="Result_Card" class="cardname">　<br>　</p>
-  <p id="Result_Position" class="position">　</p>
+  <img src="img/card.png" id="result_image" class="image imagew" onclick="Tarot();">
+  <p id="result_card" class="card">　<br>　</p>
+  <p id="result_position" class="position">　</p>
 </div>
+
+<audio id="sound">
+  <source src="paper.mp3" type="audio/mp3">
 
 <script>
   function Tarot() {
+
+    document.getElementById('sound').currentTime = 0; //連続クリックに対応
+    document.getElementById('sound').play(); //クリックしたら音を再生
 
     var card = Math.floor( Math.random() *78 );
     var ur = Math.floor( Math.random() *2 );
@@ -71,1015 +77,1015 @@
     switch ( card ){
 
       case 0:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "0<br>The Fool";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "0<br>The Fool";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 1:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "I<br>The Magician";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "I<br>The Magician";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 2:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "II<br>The High Priestess";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "II<br>The High Priestess";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 3:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "III<br>The Empress";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "III<br>The Empress";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 4:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "IV<br>The Emperor";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "IV<br>The Emperor";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 5:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "V<br>The Hierophant";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "V<br>The Hierophant";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 6:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "VI<br>The Lovers";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "VI<br>The Lovers";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 7:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "VII<br>The Chariot";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "VII<br>The Chariot";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 8:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "VIII<br>Strength";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "VIII<br>Strength";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 9:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "IX<br>The Hermit";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "IX<br>The Hermit";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 10:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "X<br>Wheel of Fortune";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "X<br>Wheel of Fortune";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 11:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "XI<br>Justice";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "XI<br>Justice";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 12:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "XII<br>The Hanged Man";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "XII<br>The Hanged Man";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 13:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "XIII<br>Death";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "XIII<br>Death";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 14:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "XIV<br>Temperance";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "XIV<br>Temperance";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 15:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "XV<br>The Devil";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "XV<br>The Devil";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 16:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "XVI<br>The Tower";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "XVI<br>The Tower";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 17:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "XVII<br>The Star";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "XVII<br>The Star";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 18:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "XVIII<br>The Moon";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "XVIII<br>The Moon";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 19:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "XIX<br>The Sun";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "XIX<br>The Sun";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 20:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "XX<br>Judgement";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "XX<br>Judgement";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 21:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "XXI<br>The World";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "XXI<br>The World";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 22:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "Ace<br>of Wands";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "Ace<br>of Wands";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 23:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "II<br>of Wands";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "II<br>of Wands";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 24:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "III<br>of Wands";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "III<br>of Wands";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 25:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "IV<br>of Wands";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "IV<br>of Wands";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 26:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "V<br>of Wands";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "V<br>of Wands";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 27:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "VI<br>of Wands";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "VI<br>of Wands";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 28:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "VII<br>of Wands";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "VII<br>of Wands";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 29:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "VIII<br>of Wands";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "VIII<br>of Wands";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 30:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "IX<br>of Wands";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "IX<br>of Wands";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 31:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "X<br>of Wands";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "X<br>of Wands";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 32:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "Page<br>of Wands";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "Page<br>of Wands";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 33:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "Knight<br>of Wands";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "Knight<br>of Wands";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 34:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "Queen<br>of Wands";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "Queen<br>of Wands";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 35:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "King<br>of Wands";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "King<br>of Wands";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 36:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "Ace<br>of Cups";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "Ace<br>of Cups";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 37:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "II<br>of Cups";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "II<br>of Cups";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 38:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "III<br>of Cups";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "III<br>of Cups";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 39:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "IV<br>of Cups";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "IV<br>of Cups";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 40:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "V<br>of Cups";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "V<br>of Cups";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 41:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "VI<br>of Cups";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "VI<br>of Cups";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 42:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "VII<br>of Cups";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "VII<br>of Cups";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 43:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "VIII<br>of Cups";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "VIII<br>of Cups";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 44:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "IX<br>of Cups";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "IX<br>of Cups";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 45:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "X<br>of Cups";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "X<br>of Cups";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 46:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "Page<br>of Cups";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "Page<br>of Cups";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 47:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "Knight<br>of Cups";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "Knight<br>of Cups";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 48:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "Queen<br>of Cups";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "Queen<br>of Cups";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 49:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "King<br>of Cups";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "King<br>of Cups";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 50:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "Ace<br>of Swords";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "Ace<br>of Swords";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 51:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "II<br>of Swords";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "II<br>of Swords";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 52:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "III<br>of Swords";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "III<br>of Swords";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 53:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "IV<br>of Swords";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "IV<br>of Swords";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 54:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "V<br>of Swords";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "V<br>of Swords";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 55:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "VI<br>of Swords";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "VI<br>of Swords";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 56:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "VII<br>of Swords";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "VII<br>of Swords";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 57:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "VIII<br>of Swords";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "VIII<br>of Swords";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 58:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "IX<br>of Swords";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "IX<br>of Swords";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 59:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "X<br>of Swords";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "X<br>of Swords";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 60:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "Page<br>of Swords";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "Page<br>of Swords";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 61:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "Knight<br>of Swords";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "Knight<br>of Swords";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 62:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "Queen<br>of Swords";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "Queen<br>of Swords";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 63:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "King<br>of Swords";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "King<br>of Swords";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 64:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "Ace<br>of Pentacles";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "Ace<br>of Pentacles";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 65:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "II<br>of Pentacles";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "II<br>of Pentacles";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 66:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "III<br>of Pentacles";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "III<br>of Pentacles";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 67:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "IV<br>of Pentacles";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "IV<br>of Pentacles";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 68:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "V<br>of Pentacles";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "V<br>of Pentacles";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 69:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "VI<br>of Pentacles";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "VI<br>of Pentacles";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 70:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "VII<br>of Pentacles";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "VII<br>of Pentacles";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 71:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "VIII<br>of Pentacles";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "VIII<br>of Pentacles";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 72:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "IX<br>of Pentacles";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "IX<br>of Pentacles";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 73:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "X<br>of Pentacles";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "X<br>of Pentacles";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 74:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "Page<br>of Pentacles";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "Page<br>of Pentacles";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 75:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "Knight<br>of Pentacles";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "Knight<br>of Pentacles";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 76:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "Queen<br>of Pentacles";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "Queen<br>of Pentacles";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
 
       case 77:
-        document.getElementById("Result_Image").src = 'img/'+card+'_'+ur+'.png';
-        document.getElementById("Result_Card").innerHTML = "King<br>of Pentacles";
+        document.getElementById("result_image").src = 'img/'+card+'_'+ur+'.png';
+        document.getElementById("result_card").innerHTML = "King<br>of Pentacles";
         switch ( ur ){
           case 0:
-            document.getElementById("Result_Position").innerHTML = "正位置";
+            document.getElementById("result_position").innerHTML = "正位置";
           break;
           case 1:
-            document.getElementById("Result_Position").innerHTML = "逆位置";
+            document.getElementById("result_position").innerHTML = "逆位置";
           break;
         }
         break;
