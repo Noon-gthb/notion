@@ -2,7 +2,7 @@
 <html lang="ja">
 
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Dancing+Script:wght@700&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Hina+Mincho&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
@@ -13,8 +13,8 @@
       text-align: center;
     }
     .field {
-      width: 130px;
-      padding: 25px 25px 10px 25px;
+      width: 180px;
+      padding-bottom: 30px;
       border-radius: 10px;
       background: #f4eeee;
       color: #bfa2a0;
@@ -25,15 +25,32 @@
     .image {
       width: 130px;
       height: auto;
-      display: block;
+      padding: 25px 0px 25px 0px;
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
     }
     .card {
-      font-size: 13px;
-      font-family: 'Cinzel', serif;
+      padding: 10px 0px 5px 0px;
+      background: #bfa2a0;
+      color: #fff;
+      font-size: 15px;
+      font-family: 'Castoro Titling', serif;
+    }
+    .line {
+      height: 15px;
+      padding: 0px;
+      background: #bfa2a0;
+      background-image: url(img/laceline.gif);
+      background-position: center;
+      background-repeat: no-repeat;
     }
     .position {
+      padding: 5px 0px 10px 0px;
+      background: #bfa2a0;
+      color: #fff;
       font-size: 13px;
-      font-family: 'Noto Serif JP', serif;
+      font-family: 'Hina Mincho', serif;
     }
   </style>
 </head>
@@ -42,8 +59,9 @@
 
 <div class="field">
   <img src="img/card.png" id="result_image" class="image" onclick="Tarot();">
-  <p id="result_card" class="card">　<br>　</p>
-  <p id="result_position" class="position">　</p>
+  <div id="result_card" class="card">　<br>　</div>
+  <div class="line"></div>
+  <div id="result_position" class="position">　</div>
 </div>
   
 <audio id="sound">
