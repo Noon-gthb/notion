@@ -13,6 +13,7 @@
       text-align: center;
     }
     .field {
+      width: 130px;
       padding: 25px 25px 10px 25px;
       border-radius: 10px;
       background: #f4eeee;
@@ -22,33 +23,16 @@
       text-align: center;
     }
     .image {
+      width: 130px;
       height: auto;
       display: block;
     }
-   @media screen and (min-width: 640px) {
-     .fieldw,.imagew {
-        width: 20vw;
-      }
-    }
-   @media screen and (min-width: 768px) {
-     .fieldw,.imagew {
-        width: 17vw;
-      }
-    }
-   @media screen and (min-width: 1024px) {
-     .fieldw,.imagew {
-        width: 13vw;
-      }
-    }
-   @media screen and (min-width: 1280px) {
-     .fieldw,.imagew {
-        width: 10vw;
-      }
-    }
     .card {
+      font-size: 13px;
       font-family: 'Cinzel', serif;
     }
     .position {
+      font-size: 13px;
       font-family: 'Noto Serif JP', serif;
     }
   </style>
@@ -56,12 +40,12 @@
 
 <body>
 
-<div class="field fieldw">
-  <img src="img/card.png" id="result_image" class="image imagew" onclick="Tarot();">
+<div class="field">
+  <img src="img/card.png" id="result_image" class="image" onclick="Tarot();">
   <p id="result_card" class="card">　<br>　</p>
   <p id="result_position" class="position">　</p>
 </div>
-
+  
 <audio id="sound">
   <source src="paper.mp3" type="audio/mp3">
 
