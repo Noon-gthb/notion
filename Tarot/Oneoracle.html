@@ -64,14 +64,8 @@
   <div id="result_position" class="position">　</div>
 </div>
   
-<audio id="sound">
-  <source src="paper.mp3" type="audio/mp3">
-
 <script>
   function Tarot() {
-
-    document.getElementById('sound').currentTime = 0; //連続クリックに対応
-    document.getElementById('sound').play(); //クリックしたら音を再生
 
     var card = Math.floor( Math.random() *78 );
     var ur = Math.floor( Math.random() *2 );
